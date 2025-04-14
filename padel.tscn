@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://iix7ruect1bw"]
+
+[ext_resource type="Texture2D" uid="uid://p4fwbq4elhs8" path="res://padel/default.png" id="1_0ghjs"]
+[ext_resource type="Texture2D" uid="uid://b1djyhvcmo1tx" path="res://padel/down.png" id="2_iihp2"]
+[ext_resource type="Texture2D" uid="uid://bxfpj0qx5aomm" path="res://padel/up.png" id="3_i5iai"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6vvx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0ghjs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iihp2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i5iai")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qo6rg"]
+radius = 14.0
+height = 286.0
+
+[node name="Padel" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_t6vvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qo6rg")
