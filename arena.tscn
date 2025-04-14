@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c74jmvas2yvt7"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1296.0
+offset_bottom = 728.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 395.0
+offset_top = 79.0
+offset_right = 613.0
+offset_bottom = 102.0
+text = "Welcome to my Padel game!"
